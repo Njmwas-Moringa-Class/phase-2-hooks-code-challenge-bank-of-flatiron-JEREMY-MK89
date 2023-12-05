@@ -1,21 +1,25 @@
-// Search.js
-import React from "react";
+import React, { useState } from 'react';
 
-function Search({ handleSearch }) {
+const Search = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   function handleChange(event) {
-    handleSearch(event.target.value);
-  };
+    const newSearchTerm = event.target.value;
+    setSearchTerm(newSearchTerm);
+    onSearch(newSearchTerm); // Pass the updated value directly
+  }
 
   return (
     <div className="ui large fluid icon input">
       <input
         type="text"
-        placeholder="Search your Recent Transactions"
+        placeholder="Search by description"
+        value={searchTerm}
         onChange={handleChange}
       />
       <i className="circular search link icon"></i>
     </div>
   );
-}
+};
 
 export default Search;
