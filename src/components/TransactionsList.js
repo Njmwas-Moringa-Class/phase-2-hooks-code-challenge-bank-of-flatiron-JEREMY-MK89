@@ -1,5 +1,6 @@
 import React from "react";
 import Transaction from "./Transaction";
+///The component is receiving a  an array of transactions as a prop, and for each transaction, it creates a new Transaction component by.map method//
 function TransactionsList({transactions}) {
   const list = transactions.map((item)=>{
     return <Transaction key={item.id} date={item.date} description={item.description} category={item.category} amount={item.amount} />;

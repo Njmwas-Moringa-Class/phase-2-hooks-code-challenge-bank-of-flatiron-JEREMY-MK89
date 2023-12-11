@@ -132,6 +132,13 @@
       "category": "members",
       "amount": "20000",
       "id": 19
+    },
+    {
+      "date": "2023-12-11",
+      "description": "vegetables",
+      "category": "food",
+      "amount": "1000",
+      "id": 20
     }
   ]
 }

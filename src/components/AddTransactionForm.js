@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import Transaction from "./Transaction";
 
 function AddTransactionForm() {
   const [date, setDate] = useState("")
@@ -7,6 +6,8 @@ function AddTransactionForm() {
   const [category, setCategory] = useState("")
   const [amount, setAmount] = useState("")
   function handleSubmit(e) {
+    //Making a POSTrequest by a call back function handleSubmit//
+
     fetch("http://localhost:8001/transactions", {
       method: "POST",
       headers: {
@@ -19,7 +20,7 @@ function AddTransactionForm() {
         amount: amount,
       }),
     });
-     alert("added successfully")
+     alert("New transaction added successfully")
   }
   return (
     <div className="ui segment">
